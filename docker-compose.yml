@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  http-service:
+    image: http-service:latest
+    working_dir: /usr/src/http-service
+    container_name: http-service
+    ports:
+       - 9500:9500
+    logging:
+        driver: none
+    volumes:
+      - /var/log/ar_vr_cms/http-service:/usr/src/http-service/logs
+      - /home/bhavin-r/ar_vr_cms/http-service/build:/usr/src/http-service
+    env_file:
+      - http-service.env
+    environment:
+      - TZ=Asia/Kolkata
