@@ -3,7 +3,7 @@ require("dotenv").config();
 export let config = {
   //Common Settings
   serviceName: process.env.SERVICE_NAME || "http-service",
-  port: process.env.PORT || 9500,
+  port: process.env.PORT || 9600,
   useDb: process.env.USE_DB === "true" ? true : false,
   useGET: process.env.useGET === "true" ? true : false,
   isDevMode: process.env.NODE_ENV === "development" ? true : false,
